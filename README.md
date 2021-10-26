@@ -33,7 +33,7 @@ Install-ADDSForest -CreateDnsDelegation:$false -DatabasePath "C:\\Windows\\NTDS"
 # if you already installed Active Directory, just run the script !
 [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
 IEX((new-object net.webclient).downloadstring("https://raw.githubusercontent.com/sujit/vulnerable-AD/master/vulnad.ps1"));
-Invoke-VulnAD -UsersLimit 100 -DomainName "cs.org"
+Invoke-VulnAD -UsersLimit 50 -DomainName "lab.local"
 ```
 
 ### Script output
